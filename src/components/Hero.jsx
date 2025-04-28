@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 function Hero() {
   return (
     <div className="relative text-pink-800 w-full">
+<<<<<<< HEAD
+=======
+      div className="relative text-pink-800 w-full">
+>>>>>>> cb01971c7ba8dba8728eb3b4af6ba4c66139d7d9
       <div className="absolute inset-0 bg-cover bg-center" style={{
         backgroundImage: 'url("https://i.pinimg.com/736x/56/f0/bb/56f0bb78f8a3bcde1f27fb1525de3fc8.jpg")', 
         opacity: '0.8'
