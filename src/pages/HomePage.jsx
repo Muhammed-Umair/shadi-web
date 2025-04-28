@@ -50,21 +50,21 @@ function HomePage() {
   const testimonials = [
     {
       id: 1,
-      image: '/images/testimonial1.jpg',
+      image: "https://randomuser.me/api/portraits/women/32.jpg",
       name: 'Sarah Johnson',
       location: 'USA',
       quote: 'Attending an Indian wedding through ShaadiGlobal was the most immersive cultural experience I\'ve ever had. The colors, music, and hospitality were incredible!'
     },
     {
       id: 2,
-      image: '/images/testimonial2.jpg',
+      image: "https://randomuser.me/api/portraits/men/54.jpg",
       name: 'Carlos Rodriguez',
       location: 'Spain',
       quote: 'I was welcomed like family at the wedding. The ceremonies were fascinating and the food was amazing. Definitely a once-in-a-lifetime experience!'
     },
     {
       id: 3,
-      image: '/images/testimonial3.jpg',
+      image: "https://randomuser.me/api/portraits/women/45.jpg",
       name: 'Yuki Tanaka',
       location: 'Japan',
       quote: 'Everything was perfectly organized from start to finish. I learned so much about Indian wedding traditions and made wonderful new friends.'
