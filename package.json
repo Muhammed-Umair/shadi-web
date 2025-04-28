@@ -11,13 +11,13 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
-    
-
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.7.0",
     "axios": "^1.9.0",
     "bootstrap": "^5.3.5",
+    "gh-pages": "^6.3.0",
+    "lucide-react": "^0.503.0",
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",

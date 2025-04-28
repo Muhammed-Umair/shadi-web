@@ -5,7 +5,15 @@ function Weddingcards({image, title, date, location, description, link }) {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden transition transform hover:-translate-y-1 hover:shadow-xl h-full flex flex-col">
       <div className="h-48 sm:h-56 md:h-64 w-full overflow-hidden">
-        <img src={image} alt={title} className="w-full h-full object-cover transition-transform hover:scale-105" />
+        <img 
+          src={image} 
+          alt={title} 
+          className="w-full h-full object-cover transition-transform hover:scale-105" 
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = 'https://via.placeholder.com/400x250?text=Wedding+Image';
+          }}
+        />
       </div>
       <div className="p-4 sm:p-5 md:p-6 flex-grow">
         <h3 className="text-lg sm:text-xl font-bold mb-2 text-gray-800">{title}</h3>

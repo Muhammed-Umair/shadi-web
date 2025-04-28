@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Hero from '../components/Hero';
 import WeddingCards from '../components/Weddingcards'
 import TestimonialCard from '../components/TestimonialCard';
@@ -16,6 +16,13 @@ import imgg4 from '../assets/Bengali+Wedding.jpg'
 
 
 function HomePage() {
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  useEffect(() => {
+    // Mark images as loaded after component mounts
+    setImagesLoaded(true);
+  }, []);
+
   // Sample data
   const featuredWeddings = [
     {
@@ -70,6 +77,12 @@ function HomePage() {
       quote: 'Everything was perfectly organized from start to finish. I learned so much about Indian wedding traditions and made wonderful new friends.'
     }
   ];
+
+  // Function to handle image loading errors
+  const handleImageError = (e) => {
+    e.target.onerror = null; 
+    e.target.src = 'https://via.placeholder.com/400x250?text=Wedding+Image';
+  };
 
   return (
     <div>
@@ -146,7 +159,12 @@ function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
             <div className="bg-white rounded-lg shadow-md overflow-hidden h-full">
               <div className="h-40 sm:h-48 overflow-hidden">
-                <img src={imgg1} alt="North Indian Wedding" className="w-full h-full object-cover transition-transform hover:scale-105" />
+                <img 
+                  src={imgg1} 
+                  alt="North Indian Wedding" 
+                  className="w-full h-full object-cover transition-transform hover:scale-105" 
+                  onError={handleImageError}
+                />
               </div>
               <div className="p-3 sm:p-4">
                 <h3 className="font-bold text-base sm:text-lg mb-1 sm:mb-2 text-gray-800">North Indian Wedding</h3>
@@ -156,7 +174,12 @@ function HomePage() {
             
             <div className="bg-white rounded-lg shadow-md overflow-hidden h-full">
               <div className="h-40 sm:h-48 overflow-hidden">
-                <img src={imgg2} alt="South Indian Wedding" className="w-full h-full object-cover transition-transform hover:scale-105" />
+                <img 
+                  src={imgg2} 
+                  alt="South Indian Wedding" 
+                  className="w-full h-full object-cover transition-transform hover:scale-105" 
+                  onError={handleImageError}
+                />
               </div>
               <div className="p-3 sm:p-4">
                 <h3 className="font-bold text-base sm:text-lg mb-1 sm:mb-2 text-gray-800">South Indian Wedding</h3>
@@ -166,7 +189,12 @@ function HomePage() {
             
             <div className="bg-white rounded-lg shadow-md overflow-hidden h-full">
               <div className="h-40 sm:h-48 overflow-hidden">
-                <img src={imgg3} alt="Bengali Wedding" className="w-full h-full object-cover transition-transform hover:scale-105" />
+                <img 
+                  src={imgg3} 
+                  alt="Bengali Wedding" 
+                  className="w-full h-full object-cover transition-transform hover:scale-105" 
+                  onError={handleImageError}
+                />
               </div>
               <div className="p-3 sm:p-4">
                 <h3 className="font-bold text-base sm:text-lg mb-1 sm:mb-2 text-gray-800">Bengali Wedding</h3>
@@ -176,7 +204,12 @@ function HomePage() {
             
             <div className="bg-white rounded-lg shadow-md overflow-hidden h-full">
               <div className="h-40 sm:h-48 overflow-hidden">
-                <img src={imgg4} alt="Gujarati Wedding" className="w-full h-full object-cover transition-transform hover:scale-105" />
+                <img 
+                  src={imgg4} 
+                  alt="Gujarati Wedding" 
+                  className="w-full h-full object-cover transition-transform hover:scale-105" 
+                  onError={handleImageError}
+                />
               </div>
               <div className="p-3 sm:p-4">
                 <h3 className="font-bold text-base sm:text-lg mb-1 sm:mb-2 text-gray-800">Gujarati Wedding</h3>

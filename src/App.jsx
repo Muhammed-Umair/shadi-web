@@ -14,8 +14,10 @@ import TourismPlaces from './pages/TourismPlaces';
 import './App.css';
 
 function App() {
+  const basePath = "/shadi-web";
+
   return (
-    <Router>
+    <Router basename={basePath}>
       <div className="App flex flex-col min-h-screen">
         <Navvbar />
         <main className="flex-grow">
