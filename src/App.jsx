@@ -16,19 +16,21 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App flex flex-col min-h-screen">
         <Navvbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/wedding-types" element={<WeddingTypes />} />
-          <Route path="/packages" element={<Packages />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/tourism" element={<TourismPlaces />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-        </Routes>
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/wedding-types" element={<WeddingTypes />} />
+            <Route path="/packages" element={<Packages />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/tourism" element={<TourismPlaces />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+          </Routes>
+        </main>
         <Footerr />
       </div>
     </Router>
